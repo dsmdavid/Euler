@@ -1,0 +1,35 @@
+##Multiples of 3 and 5
+##Problem 1
+##If we list all the natural numbers below 10 that are multiples of 3 or 5,
+##we get 3, 5, 6 and 9. The sum of these multiples is 23.
+##
+##Find the sum of all the multiples of 3 or 5 below 1000.
+
+import numpy as np
+import timeit
+
+def calculate_m(Nmax,number):
+        
+    # create the array
+    series_m = np.zeros(Nmax, dtype=bool)
+
+    series_m[*i::i] = False
+
+    return series_m
+
+def check_sum(Nmax, number1, number2):
+    number1ar = calculate_m(Nmax, number1)
+    number2ar = calculate_m(Nmax, number2)
+    print(number1ar)
+    print(number2ar)
+
+def main():
+    check_sum(10,3,5)
+    print("timing...")
+##    t = timeit.Timer("calculateprime()","from __main__ import calculateprime")
+##
+##    print(t.timeit())
+##    print("job done")
+
+main()
+
